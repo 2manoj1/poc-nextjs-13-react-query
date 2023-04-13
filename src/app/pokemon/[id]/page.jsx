@@ -1,7 +1,6 @@
 import getQueryClient, { getPokemonByID } from "@/app/store";
 import { dehydrate } from "@tanstack/query-core";
 import Hydrate from "@/app/components/Hydrate";
-import PokemonCard from "@/app/components/PokemonCard";
 import PokemonDetails from "@/app/components/PokemonDetails";
 
 const PokemonPage = async ({ params }) => {
