@@ -11,7 +11,7 @@ const PokemonDetails = ({ id }) => {
 		staleTime: 1000 * 60,
 	});
 	return (
-		<div className="grid place-items-center my-16 gap-8">
+		<div className="grid place-items-center my-8 gap-8">
 			<h1 className="text-4xl">Details of Pokemon</h1>
 			<PokemonCard
 				name={data?.name}

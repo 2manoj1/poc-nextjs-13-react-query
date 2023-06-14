@@ -13,7 +13,7 @@ const Pokemons = () => {
 	});
 	return (
 		<div className="container mx-auto my-16">
-			<ul className="flex flex-col gap-4 items-center">
+			<ul className="flex flex-wrap gap-8 justify-center">
 				{data?.results?.map(({ name, imgUrl, id }) => (
 					<li key={id}>
 						<Link href={`/pokemon/${id}`}>

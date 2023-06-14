@@ -1,8 +1,7 @@
 import { QueryClient } from "@tanstack/query-core";
 import { cache } from "react";
 
-const getQueryClient = cache(() => new QueryClient());
-export default getQueryClient;
+export const getQueryClient = cache(() => new QueryClient());
 
 const getIdFromURL = (url) => {
 	if (typeof url !== "string") return "";

@@ -1,7 +1,8 @@
-import getQueryClient, { getPokemonByID } from "@/app/store";
+import { getQueryClient, getPokemonByID } from "@/app/store";
 import { dehydrate } from "@tanstack/query-core";
-import Hydrate from "@/app/components/Hydrate";
 import PokemonDetails from "@/app/components/PokemonDetails";
+import Hydrate from "@/app/components/Hydrate";
+import Link from "next/link";
 
 const PokemonPage = async ({ params }) => {
 	const { id } = params;
@@ -16,7 +17,12 @@ const PokemonPage = async ({ params }) => {
 	return (
 		<main>
 			<Hydrate state={dehydratedState}>
-				<section className="container mx-auto">
+				<section className="container mx-auto mt-8">
+					<Link
+						href="/"
+						className="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded">
+						⬅️ Back
+					</Link>
 					<PokemonDetails id={id} />
 				</section>
 			</Hydrate>

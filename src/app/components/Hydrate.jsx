@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { HydrationBoundary } from "@tanstack/react-query";
+import { Hydrate as HydrationBoundary } from "@tanstack/react-query";
 
 function Hydrate(props) {
 	return <HydrationBoundary {...props} />;
